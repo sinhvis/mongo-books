@@ -1,0 +1,11 @@
+<div ng-controller="HomeController as vm">
+	<div ng-repeat="book in vm.books">
+		<div class="well col-sm-4 movie-well">
+			<h2>{{book.title}}</h2>
+			<h4>{{book.author}}</h4>
+			<h4><i>Posted: {{book.postedDate}}</i></h4>
+
+			<button ui=sref="BookInfo({id: book._id})" class="btn btn-info movie-button">See Book</button>
+		</div>
+	</div>
+</div>
