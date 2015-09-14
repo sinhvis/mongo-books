@@ -12,6 +12,11 @@
 			templateUrl: 'views/create_book.html',
 			controller: 'CreateBookController',
 			controllerAs: 'vm'
+		}).state('BookInfo', {
+			url: '/Book/:id',
+			templateUrl: 'views/book_info.html',
+			controller: 'BookDetailsController',
+			controllerAs: 'vm'
 		});
 		$urlRouterProvider.otherwise('/');
 	}

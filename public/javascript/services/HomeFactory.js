@@ -18,6 +18,14 @@
 			return q.promise;
 		}
 
+		o.getBook = function(id) {
+			var q = $q.defer() ;
+			$http.get('/api/movies/' + id).success(function(res) {
+				q.resolve(res) ;
+			}) ;
+			return q.promise ;
+		} ;
+
 		o.getBooks = function() {
 			var q = $q.defer() ;
 			$http.get('/api/books').success(function(res) {
@@ -25,7 +33,7 @@
 			}) ;
 			return q.promise ;
 		} ;
-		
+
 		return o;
 	}
 })();
